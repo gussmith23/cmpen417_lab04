@@ -1,0 +1,58 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Thu Mar 30 11:10:11 2017
+| Host         : gus-laptop running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_zynq_design_axi_gpio_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the update of base_zynq_design_axi_gpio_0_0 (xilinx.com:ip:axi_gpio:2.0 (Rev. 7)) to current project options.
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+WARNING: The normal upgrade process failed due to validation failures in the given configuration . Attempting partial upgrade.
+This process will attempt to set as many user parameters as possible.Please check the parameters whose values were not applied
+
+WARNING: Unable to set the value 'leds_4bits' on parameter 'GPIO BOARD INTERFACE' due to the following failure - 
+Value 'leds_4bits' is out of the range for parameter 'GPIO BOARD INTERFACE(GPIO_BOARD_INTERFACE)' for BD Cell '/axi_gpio_0' . Valid values are - Custom, btns_5bits, leds_8bits, sws_8bits
+.Restoring to an old valid value of 'Custom'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:axi_gpio:2.0 -user_name base_zynq_design_axi_gpio_0_0
+set_property -dict "\
+  CONFIG.GPIO_BOARD_INTERFACE leds_4bits \
+  CONFIG.GPIO2_BOARD_INTERFACE Custom \
+  CONFIG.C_DOUT_DEFAULT_2 0x00000000 \
+  CONFIG.USE_BOARD_FLOW true \
+  CONFIG.C_TRI_DEFAULT 0xFFFFFFFF \
+  CONFIG.C_ALL_OUTPUTS 1 \
+  CONFIG.C_IS_DUAL 0 \
+  CONFIG.C_ALL_INPUTS 0 \
+  CONFIG.C_TRI_DEFAULT_2 0xFFFFFFFF \
+  CONFIG.C_GPIO2_WIDTH 32 \
+  CONFIG.Component_Name base_zynq_design_axi_gpio_0_0 \
+  CONFIG.C_ALL_INPUTS_2 0 \
+  CONFIG.C_ALL_OUTPUTS_2 0 \
+  CONFIG.C_INTERRUPT_PRESENT 0 \
+  CONFIG.C_GPIO_WIDTH 4 \
+  CONFIG.C_DOUT_DEFAULT 0x00000000 " [get_ips base_zynq_design_axi_gpio_0_0]
+
+

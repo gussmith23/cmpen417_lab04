@@ -1,0 +1,60 @@
+{
+   comment_0: "Example Zynq Design and Bus Functional Simulation
+",
+   comment_1: "Simple Zynq Design and BFM Simulation
+For instructions look at the Zynq_example_design_readme.pdf in
+../Xilinx/Vivado/xxxx.x/examples/Vivado_Tutorial/
+where xxxx is year and y is release number
+
+To export this design to SDK:
+1. Click on Generate Bitstream in Flow Navigator
+2. Select File => Export => Export Hardware",
+   commentid: "comment_0|comment_1|",
+   da_ps7_cnt: "3",
+   font_comment_0: "35",
+   font_comment_1: "14",
+   guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 910 -defaultsOSRD
+preplace port leds_4bits -pg 1 -y 1130 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 930 -defaultsOSRD
+preplace inst axi_usb2_device_2 -pg 1 -lvl 3 -y 380 -defaultsOSRD
+preplace inst axi_usb2_device_3 -pg 1 -lvl 3 -y 530 -defaultsOSRD
+preplace inst axi_usb2_device_4 -pg 1 -lvl 3 -y 830 -defaultsOSRD
+preplace inst axi_usb2_device_5 -pg 1 -lvl 3 -y 680 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 1130 -defaultsOSRD
+preplace inst rst_processing_system7_0_50M -pg 1 -lvl 1 -y 740 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -y 1000 -defaultsOSRD
+preplace inst axi_usb2_device_0 -pg 1 -lvl 3 -y 80 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 3 -y 1000 -defaultsOSRD
+preplace inst axi_usb2_device_1 -pg 1 -lvl 3 -y 230 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 580 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 980 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 1 4 N 910 NJ 910 NJ 910 NJ
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 2 1 780
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 800
+preplace netloc rst_processing_system7_0_50M_interconnect_aresetn 1 1 1 450
+preplace netloc processing_system7_0_axi_periph_M07_AXI 1 2 1 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 3 1 N
+preplace netloc processing_system7_0_axi_periph_M05_AXI 1 2 1 840
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 830 430
+preplace netloc rst_processing_system7_0_50M_peripheral_aresetn 1 1 2 470 850 820
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 1 770
+preplace netloc processing_system7_0_axi_periph_M06_AXI 1 2 1 770
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 N 930 NJ 930 NJ 930 NJ
+preplace netloc axi_gpio_0_GPIO 1 3 2 NJ 1130 N
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 840 460 840 810
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 2 1 830
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 2 1 790
+preplace cgraphic comment_1 place abs 1051 1310 textcolor 4 linecolor 3
+preplace cgraphic comment_0 place abs 144 -99 textcolor 4 linecolor 3 linewidth 0
+levelinfo -pg 1 0 230 620 970 1210 1340
+",
+   }
+{
+   da_axi4_cnt: "6",
+}
+{
+   da_axi4_cnt: "6",
+}
