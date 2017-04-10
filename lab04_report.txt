@@ -1,0 +1,10 @@
+Worst negative slack initially:
+
+Description of WNS path initially:
+
+Floorplanning plan:
+
+New WNS after floorplanning:
+
+Did your floorplanning plan work? Why or why not?
+
